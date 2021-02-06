@@ -1,0 +1,82 @@
+.home-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.left-column.row-3 {
+    background: rgb(238, 232, 226);
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/SewingMachine.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-column.row-3 {
+    background: #ECF1F2;
+    width: 100%;
+    height: 100vh;
+}
+
+.buttons-image-conatiner {
+    margin: auto;
+    width: 60%;
+    height: 50%;
+    background-image: url(../images/buttonsFosseLabel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#right-column-row-3-text-container {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    flex-direction: column;
+    margin-top: 130px;
+}
+
+#right-column-row-3-title {
+    color: #493C34;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    line-height: 50px;
+    margin: auto;
+}
+
+#right-column-row-3-subtitle {
+    display: flex;
+    margin: auto;
+    font-size: 10px;
+    line-height: 40px;
+    color: #493C34;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+span {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#r3rc-fosse {
+    font-style: italic;
+}
+
+#r3rc-loungewear {
+    letter-spacing: 1px;
+}
+
+
