@@ -14,7 +14,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 header {
@@ -37,8 +37,22 @@ footer {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
+  width: 100%;
+  height: fit-content;
+  color: rgb(61, 68, 52);
+  background-color: rgb(238, 232, 226);
+  padding: 40px;
+  text-align: center;
 }
 
-/* NavBar */
+button {
+  background-color: transparent;
+  border: none;
+  color: rgb(61, 68, 52);
+  font-weight: 500;
+}
 
-
+a {
+  text-decoration: none;
+  color: rgb(61, 68, 52);
+}

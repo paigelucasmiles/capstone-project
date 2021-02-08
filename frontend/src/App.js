@@ -1,7 +1,9 @@
 import { Route } from 'react-router-dom'
 import './App.css';
-import NavBar from './components/NavBar'
-import Home from './pages/Home'
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
 
 function App() {
   return (
@@ -10,11 +12,16 @@ function App() {
         <NavBar />
       </header>
         <main>
-          <Route exact path="/" component={Home} />
+          <switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route path='/shop' component={Shop}></Route>
+          </switch>
           {/* <Route path='/product/:id' component={ProductScreen} ></Route> */}
           {/* <Route path='/' component={HomeScreen} exact ></Route> */}
         </main>
-      <footer className="row center">All rights reserved</footer>
+        <footer id='footer'>
+          <Footer />
+        </footer>
     </div>
   );
 }

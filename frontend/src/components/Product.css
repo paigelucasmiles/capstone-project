@@ -1,0 +1,27 @@
+.card {
+    /* border: 0.1rem #c0c0c0 solid; */
+    /* background-color: #f8f8f8; */
+    border-radius: 0.5rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+img.medium {
+    max-width: 22rem;
+    width: 100%;
+}
+
+.card-body, .price {
+    padding-top: 1rem;
+}
+
+h2.product-name {
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 14px;
+}
