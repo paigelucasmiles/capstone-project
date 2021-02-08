@@ -1,0 +1,29 @@
+.cart-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    /* background-color: red; */
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.cart-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.cart-items-container {
+    /* background-color: blue; */
+    width: 750px;
+    height: 100vh;
+}
+
+.cart-summary {
+    background-color: #ECF1F2;
+    width: 100%;
+    height: 100vh;
+}

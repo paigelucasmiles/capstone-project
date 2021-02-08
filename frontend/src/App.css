@@ -30,7 +30,6 @@ header {
 
 main {
   grid-area: main;
-  /* padding: 1rem; */
 }
 
 footer {
@@ -50,6 +49,10 @@ button {
   border: none;
   color: rgb(61, 68, 52);
   font-weight: 500;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 a {

@@ -1,0 +1,17 @@
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+p.product-name {
+    color: black;
+}
+
+img.small {
+    max-width: 5rem;
+    width: 100%;
+}

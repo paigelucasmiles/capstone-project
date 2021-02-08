@@ -23,5 +23,11 @@ h2.product-name {
 }
 
 .price {
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
+}
+
+.price > button {
+    font-size: 12px;
 }
