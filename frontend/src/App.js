@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
-import Footer from './components/footer_components/Footer';
-import NavBar from './components/navbar_components/NavBar';
+import Footer from './components/footer/Footer';
+import NavBar from './components/navbar/NavBar';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Shop from './pages/Shop';

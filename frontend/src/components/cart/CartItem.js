@@ -27,7 +27,7 @@ export default function CartItem(props) {
                 <option value="4">4</option>
             </select>
             <div className="cart-price-container">
-                <p className='cart-price'>£ 200</p>
+                <p className='cart-price'>£ subtotal price</p>
             </div>
         </div>
     )

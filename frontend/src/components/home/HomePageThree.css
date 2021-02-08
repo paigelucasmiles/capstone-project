@@ -16,7 +16,7 @@
     background: rgb(238, 232, 226);
     width: 100%;
     height: 100vh;
-    background-image: url(../images/SewingMachine.jpeg);
+    background-image: url(../../images/SewingMachine.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -31,7 +31,7 @@
     margin: auto;
     width: 60%;
     height: 50%;
-    background-image: url(../images/buttonsFosseLabel.jpg);
+    background-image: url(../../images/buttonsFosseLabel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 

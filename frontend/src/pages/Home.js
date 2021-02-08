@@ -1,8 +1,8 @@
 import React from 'react';
 
-import HomePageOne from '../components/HomePageOne';
-import HomePageTwo from '../components/HomePageTwo';
-import HomePageThree from '../components/HomePageThree';
+import HomePageOne from '../components/home/HomePageOne';
+import HomePageTwo from '../components/home/HomePageTwo';
+import HomePageThree from '../components/home/HomePageThree';
 
 export default function Home() {
     return(
