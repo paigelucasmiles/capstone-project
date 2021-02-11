@@ -1,9 +1,9 @@
 .grid-container {
   display: grid;
-  grid-template-areas: 
-      'header'
-      'main'
-      'footer';
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -36,7 +36,6 @@ footer {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
-  width: 100%;
   height: fit-content;
   color: rgb(61, 68, 52);
   background-color: rgb(238, 232, 226);
@@ -44,18 +43,35 @@ footer {
   text-align: center;
 }
 
-button {
+button,
+select {
   background-color: transparent;
   border: none;
   color: rgb(61, 68, 52);
-  font-weight: 500;
+  font-weight: 100;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
-button:hover {
+button:hover,
+select:hover {
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
   color: rgb(61, 68, 52);
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading-screen.child {
+  height: inherit;
+  width: inherit;
 }

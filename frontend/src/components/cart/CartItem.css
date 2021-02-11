@@ -1,17 +1,24 @@
 .cart-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 12px;
-    margin-top: 40px;
-}
-
-p.product-name {
-    color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 12px;
+  margin-top: 40px;
 }
 
 img.small {
-    max-width: 5rem;
-    width: 100%;
+  max-width: 5rem;
+  width: 100%;
+}
+
+.cart-product-name {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cart-product-detail {
+  word-spacing: 4px;
+  color: rgb(61, 68, 52);
+  font-variant: small-caps;
 }

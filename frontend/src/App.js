@@ -1,33 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/NavBar';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
 import Shop from './pages/Shop';
 
 function App() {
 
-  const cart = [
-    {
-      id: 1,
-      name: "linen set",
-      price: 100,
-      size: 'small',
-      image: './images/p2.jpg'
-    },
-    {
-      id: 2,
-      name: "silk set",
-      price: 200,
-      size: 'medium',
-      image: './images/p4.jpg'
-    }
-  ]
+  const [productData, setProductData] = useState([])
 
-  const [itemsInCart, setItemsInCart] = useState(cart)
+  const getProductData = () => {
+      fetch('http://localhost:4000/products')
+          .then(response => response.json())
+          .then(data => {
+              setProductData(data.products)
+          })
+  }
 
+  useEffect(() => {
+    getProductData();
+    getCartData();
+  }, []);
+
+  const [itemsInCart, setItemsInCart] = useState([])
+
+  const getCartData = () => {
+    fetch('http://localhost:4000/cart')
+      .then(response => response.json())
+      .then(items => {
+        setItemsInCart(items.item);
+      })
+  }
+
+  const addItemsToCart = (id, name, price, color, size, quantity) => {
+    setItemsInCart([...itemsInCart,
+      {
+        id: id,
+        name: name,
+        price: price,
+        color: color,
+        size: size,
+        quantity: quantity
+    }])
+  }
 
   return (
     <div className='grid-container'>
@@ -36,8 +54,9 @@ function App() {
       </header>
         <main>
           <Route exact path="/" component={Home}></Route>
-          <Route path='/shop' render={(routerProps) => <Shop addItemsToCart={setItemsInCart} />}></Route>
-          <Route path='/cart' render={(routerProps) => <Cart itemsInCart={itemsInCart} />} />
+          <Route exact path='/shop' render={(routerProps) => <Shop {...routerProps} productData={productData} />} />
+          <Route path='/cart' render={(routerProps) => <Cart itemsInCart={itemsInCart} productData={productData} />} />
+          <Route path='/product/:id' render={(routerProps) => <ProductDetail {...routerProps} productData={productData} addItemsToCart={addItemsToCart} />} />
         </main>
         <footer id='footer'>
           <Footer />

@@ -3,31 +3,36 @@ import './CartItem.css';
 
 export default function CartItem(props) {
 
-    const { name, image, price, size } = props
+    const { productId, color, size, quantity, productData } = props
+
+    const productInCart = productData.find((product) => product.id === productId)
+
+    const subtotal = () => {
+        return productInCart.price * quantity
+    }
 
     return (
         <div className="cart-item">
             <div className="cart-item-image-container">
                 <img
-                    src={image}
+                    src={productInCart.image}
                     alt='product thumbnail'
                     className="small"
                 ></img>
             </div>
-                <p className="product-name">{name}</p>
-                <p className="product-name">size {size}</p>
-                <div className="cart-price-container">
-                    <p className='cart-price'>£ {price}</p>
+            <div className="product-info-container">
+                <p className="cart-product-name">{productInCart.name}</p>
+                <p className="cart-product-detail">Colour: {color}</p>
+                <p className="cart-product-detail">Size: {size}</p>
             </div>
-            <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
+                <div className="cart-price-container">
+                    <p className='cart-price'>£ {productInCart.price}</p>
+                </div>
+                <div className="cart-price-container">
+                    <p className='cart-price'>{quantity}</p>
+                </div>
             <div className="cart-price-container">
-                <p className='cart-price'>£ subtotal price</p>
+                <p className='cart-price'>£ {subtotal()}</p>
             </div>
         </div>
     )
