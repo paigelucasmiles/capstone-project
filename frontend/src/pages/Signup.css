@@ -1,0 +1,49 @@
+#signup-form-container {
+  width: 30vw;
+  margin: auto;
+  margin-top: 8%;
+  padding: 5%;
+  background-color: rgb(238, 232, 226);
+}
+
+h1#signup-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 38px;
+  padding-bottom: 4%;
+}
+
+input.signup-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+button#create-account-button {
+  margin-top: 4%;
+  border: none;
+  background-color: white;
+  padding: 6px;
+}
+
+#link-to-login-container {
+  display: inline-flex;
+  width: 75%;
+}
+
+#have-account-text {
+  font-weight: 200;
+  font-size: 12px;
+  padding-top: 8%;
+  padding-left: 8%;
+  padding-right: 2%;
+}
+
+#have-account-link {
+  font-weight: 200;
+  font-size: 12px;
+  padding-top: 8%;
+  text-decoration: underline;
+}

@@ -1,0 +1,50 @@
+#login-form-container {
+  width: 30vw;
+  margin: auto;
+  margin-top: 12%;
+  margin-bottom: 8%;
+  padding: 5%;
+  background-color: rgb(238, 232, 226);
+}
+
+h1#login-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 38px;
+  padding-bottom: 4%;
+}
+
+input.login-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+button#login-button {
+  margin-top: 4%;
+  border: none;
+  background-color: white;
+  padding: 6px;
+}
+
+#link-to-signup-container {
+  display: inline-flex;
+  width: 75%;
+}
+
+#need-account-text {
+  font-weight: 200;
+  font-size: 12px;
+  padding-top: 8%;
+  padding-left: 8%;
+  padding-right: 2%;
+}
+
+#need-account-link {
+  font-weight: 200;
+  font-size: 12px;
+  padding-top: 8%;
+  text-decoration: underline;
+}

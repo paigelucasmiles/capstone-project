@@ -6,7 +6,6 @@ export default function Cart(props) {
 
     const { itemsInCart, productData } = props;
 
-
     return (
         <div className='cart-row' >
             <div className='cart-column'>

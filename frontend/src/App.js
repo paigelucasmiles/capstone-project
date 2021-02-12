@@ -7,10 +7,13 @@ import Cart from './pages/Cart';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import Shop from './pages/Shop';
+import SignUp from './pages/Signup';
+import Login from './pages/Login';
 
 function App() {
 
   const [productData, setProductData] = useState([])
+  const [user, setUser] = useState('')
 
   const getProductData = () => {
       fetch('http://localhost:4000/products')
@@ -47,6 +50,10 @@ function App() {
     }])
   }
 
+  const handleLogin = (email, password) => {
+    console.log(email, password)
+  }
+
   return (
     <div className='grid-container'>
       <header className='row'>
@@ -54,6 +61,8 @@ function App() {
       </header>
         <main>
           <Route exact path="/" component={Home}></Route>
+          <Route path='/signup' component={SignUp} />
+          <Route path='/login' render={(routerProps) => <Login handleLogin={handleLogin} />}/>
           <Route exact path='/shop' render={(routerProps) => <Shop {...routerProps} productData={productData} />} />
           <Route path='/cart' render={(routerProps) => <Cart itemsInCart={itemsInCart} productData={productData} />} />
           <Route path='/product/:id' render={(routerProps) => <ProductDetail {...routerProps} productData={productData} addItemsToCart={addItemsToCart} />} />
