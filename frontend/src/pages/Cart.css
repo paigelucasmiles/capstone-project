@@ -24,7 +24,7 @@
 .cart-summary {
   background-color: #ecf1f2;
   width: 88%;
-  height: 40vh;
+  height: fit-content;
   margin-top: 24px;
 }
 
@@ -40,4 +40,5 @@
   justify-content: space-between;
   font-size: 14px;
   font-weight: 400;
+  padding-bottom: 24px;
 }

@@ -48,3 +48,10 @@ button#login-button {
   padding-top: 8%;
   text-decoration: underline;
 }
+
+.error-message {
+  font-variant: small-caps;
+  color: red;
+  padding: 8px;
+  font-size: 16px;
+}

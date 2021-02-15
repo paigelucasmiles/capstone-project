@@ -3,7 +3,10 @@ import './NavBar.css'
 import { Link } from 'react-router-dom';
 import Logo from '../../images/FOSSE-choc.png';
 
-export default function NavBar() {
+export default function NavBar(props) {
+
+    const { user } = props
+
     return (
         <>
         <div className='top-bar-left'>
@@ -19,7 +22,7 @@ export default function NavBar() {
         </div>
         <div className='top-bar-right'>
             <ul className="menu vertical right-medium-horizontal">
-                <Link className="nav-list-item" to='/login'>Login</Link>
+                <Link className="nav-list-item" to='/login'>{user ? user.email : "Login" }</Link>
                 {/* <Link className="nav-list-item" to='/signup'>Sign Up</Link> */}
                 <Link className="nav-list-item" to='/cart'>Cart</Link>
                 <Link className="nav-list-item" to='/contact'>Contact</Link>
