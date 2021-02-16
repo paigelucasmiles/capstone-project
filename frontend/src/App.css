@@ -23,14 +23,14 @@ header {
   width: 90%;
   height: 4rem;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 48px;
   margin-bottom: 30px;
   z-index: 200;
 }
 
 main {
   grid-area: main;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 footer {

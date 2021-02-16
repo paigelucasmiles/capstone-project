@@ -1,0 +1,29 @@
+#contact-form-container {
+    width: 30vw;
+    margin: auto;
+    margin-top: 12%;
+    padding: 5%;
+    background-color: rgb(238, 232, 226);
+}
+
+h1#contact-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 38px;
+    padding-bottom: 4%;
+}
+
+input.contact-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+button#create-account-button {
+    margin-top: 4%;
+    border: none;
+    background-color: white;
+    padding: 6px;
+}

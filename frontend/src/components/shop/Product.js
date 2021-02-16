@@ -4,14 +4,7 @@ import './Product.css'
 
 export default function Product(props) {
     
-    const { product, addItemsToCart } = props
-
-
-    // finish this function from product page as you need the size information
-    const handleClick = (event) => {
-        // addItemsToCart()
-        console.log(event, product)
-    } 
+    const { product } = props
 
     return (
         <div className="card">

@@ -1,35 +1,38 @@
 .top-bar {
-    position: fixed;
+  position: fixed;
 }
 
-.top-bar, .top-bar-left, .top-bar-right, .menu {
-    display: flex;
-    flex-direction: row;
-    background: rgb(238, 232, 226);
-    margin: auto;
-    font-size: 10px;
-    color: rgb(61, 68, 52);
+.top-bar,
+.top-bar-left,
+.top-bar-right,
+.menu {
+  display: flex;
+  flex-direction: row;
+  background: rgb(238, 232, 226);
+  margin: auto;
+  font-size: 10px;
+  color: rgb(61, 68, 52);
 }
 
 .left-medium-horizontal {
-    position: absolute;
-    left: 200px;
-    top: 55px
-
+  position: absolute;
+  left: 200px;
+  top: 62px;
 }
 
 .right-medium-horizontal {
-    position: absolute;
-    top: 55px;
-    right: 200px;
+  position: absolute;
+  top: 62px;
+  right: 200px;
 }
 
 img#logo {
-    position: relative;
-    height: 120px;
-    top: -25px;
+  position: relative;
+  height: 120px;
+  top: -25px;
 }
 
 a.nav-list-item {
-    padding: 15px;
+  padding: 15px;
+  text-decoration: underline;
 }

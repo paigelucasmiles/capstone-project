@@ -1,5 +1,5 @@
 // import React, { useEffect, useState } from 'react';
-import Product from '../components/shop/Product';
+import Product from '../../components/shop/Product';
 
 export default function Shop(props) {
 

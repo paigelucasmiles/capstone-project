@@ -3,12 +3,16 @@ import { Route } from 'react-router-dom'
 import './App.css';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/NavBar';
-import Cart from './pages/Cart';
-import Home from './pages/Home';
-import ProductDetail from './pages/ProductDetail';
-import Shop from './pages/Shop';
-import SignUp from './pages/Signup';
-import Login from './pages/Login';
+import Cart from './pages/cart/Cart';
+import Home from './pages/home/Home';
+import ProductDetail from './pages/shop/ProductDetail';
+import Shop from './pages/shop/Shop';
+import SignUp from './pages/signup/Signup';
+import Login from './pages/login/Login';
+import About from './pages/about/About';
+import Information from './pages/information/Information'
+import Shipping from './pages/shipping/Shipping'
+import Contact from './pages/contact/Contact'
 
 function App() {
 
@@ -63,16 +67,27 @@ function App() {
       })
   }
 
-  const addItemsToCart = (id, name, price, color, size, quantity) => {
-    setItemsInCart([...itemsInCart,
-      {
+  const addItemsToCart = (id, color, size, quantity) => {
+
+    const newItemToAddToCart = {
+      product: {
         id: id,
-        name: name,
-        price: price,
         color: color,
         size: size,
         quantity: quantity
-    }])
+      }
+    }
+
+    fetch('http://localhost:4000/cart', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }, body: JSON.stringify(newItemToAddToCart)
+    })
+    .then(response => response.json())
+    .then(item => {
+      setItemsInCart([...itemsInCart, item])
+    })
   }
 
   const handleLogin = (email, password) => {
@@ -132,6 +147,10 @@ function App() {
       </header>
         <main>
           <Route exact path="/" component={Home}></Route>
+          <Route path='/about' component={About}></Route>
+          <Route path="/information" component={Information}></Route>
+          <Route path='/shipping' component={Shipping}></Route>
+          <Route path='/contact' component={Contact} ></Route>
           <Route path='/signup' render={(routerProps) => <SignUp user={user} errorMessage={errorMessage} handleSignUp={handleSignUp} />} />
           <Route path='/login' render={(routerProps) => <Login handleLogin={handleLogin} user={user} errorMessage={errorMessage} />}/>
           <Route exact path='/shop' render={(routerProps) => <Shop {...routerProps} productData={productData} />} />

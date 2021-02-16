@@ -28,8 +28,9 @@ export default function Product(props) {
     }
     
     const handleSubmit = (event) => {
-        event.preventDefault()
-        addItemsToCart(productSelected.id, productSelected.name, productSelected.price, color, size, quantity)
+        event.preventDefault();
+        addItemsToCart(productSelected.id, color, size, quantity);
+        props.history.push('/cart');
     }
     
     return (

@@ -1,12 +1,14 @@
 import React from 'react';
 import './Cart.css';
-import CartItem from '../components/cart/CartItem';
+import CartItem from '../../components/cart/CartItem';
 import { PayPalButton } from "react-paypal-button-v2";
 
 
 export default function Cart(props) {
 
     const { itemsInCart, productData } = props;
+
+    console.log(itemsInCart)
 
     return (
         <div className='cart-row' >
@@ -23,7 +25,7 @@ export default function Cart(props) {
                         <h1>ORDER SUMMARY</h1>
                         <div id='cart-summary-price'>
                             <h2>ORDER TOTAL</h2>
-                            <p>£ 675</p>
+                            <p>£ total</p>
                         </div>
                         <PayPalButton amount="0.01"
                             // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"

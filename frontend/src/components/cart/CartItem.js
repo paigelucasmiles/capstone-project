@@ -8,7 +8,8 @@ export default function CartItem(props) {
     const productInCart = productData.find((product) => product.id === productId)
 
     const subtotal = () => {
-        return productInCart.price * quantity
+        const subtotalAmount = productInCart.price * quantity
+        return subtotalAmount
     }
 
     return (
