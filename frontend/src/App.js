@@ -14,6 +14,8 @@ import Information from './pages/information/Information'
 import Shipping from './pages/shipping/Shipping'
 import Contact from './pages/contact/Contact'
 
+
+
 function App() {
 
   const [productData, setProductData] = useState([]);
@@ -79,8 +81,6 @@ function App() {
   const updateItemsInCart = (newQuantity, productId) => {
     const thisProduct = findProductInCart(productId)
 
-    console.log(thisProduct)
-
     const itemToUpdate = {
       id: thisProduct.id,
       productColor: thisProduct.productColor,
@@ -96,8 +96,12 @@ function App() {
       }, body: JSON.stringify({itemToUpdate: itemToUpdate})
     })
     .then(response => response.json())
-    .then(items => {
-      console.log(items)
+    .then(result => {
+      const index = itemsInCart.findIndex((element) => element.id === result.id)
+      let newItemsInCartArray = [...itemsInCart]
+      newItemsInCartArray[index] = result
+
+      setItemsInCart(newItemsInCartArray)
     })
   }
 
