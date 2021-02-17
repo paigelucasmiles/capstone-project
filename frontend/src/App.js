@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/NavBar';
 import Cart from './pages/cart/Cart';
 import Home from './pages/home/Home';
-import ProductDetail from './pages/shop/ProductDetail';
+import ProductDetail from './pages/productdetail/ProductDetail';
 import Shop from './pages/shop/Shop';
 import SignUp from './pages/signup/Signup';
 import Login from './pages/login/Login';
@@ -24,15 +24,23 @@ function App() {
   const [itemsInCart, setItemsInCart] = useState([]);
 
 
-  const getProductData = () => {
-      fetch('http://localhost:4000/products')
-          .then(response => response.json())
-          .then(data => {
-              setProductData(data.products)
-          })
+    const getProductData = () => {
+    fetch('http://localhost:4000/products')
+        .then(response => response.json())
+        .then(data => {
+            setProductData(data.products)
+        })
   }
 
-    const validateUser = () => {
+  const getCartData = () => {
+    fetch('http://localhost:4000/cart')
+      .then(response => response.json())
+      .then(items => {
+        setItemsInCart(items.item);
+      })
+  }
+
+  const validateUser = () => {
     let token = sessionStorage.getItem('token')
     if (token) {
       fetch('http://localhost:4000/profile', {
@@ -55,20 +63,13 @@ function App() {
     }
   }
 
-  const getCartData = () => {
-    fetch('http://localhost:4000/cart')
-      .then(response => response.json())
-      .then(items => {
-        setItemsInCart(items.item);
-      })
-  }
 
-  useEffect(() => {
+useEffect(() => {
     getProductData();
     getCartData();
     validateUser();
-  }, []);
-
+    console.log("hello")
+}, []);
 
   // const findProduct = (productId) => {
   //   return productData.find((product) => product.id === productId)
@@ -106,6 +107,8 @@ function App() {
   }
 
 
+
+
   const addItemsToCart = (id, color, size, quantity) => {
 
     const newItemToAddToCart = {
@@ -130,7 +133,8 @@ function App() {
   }
 
 
-  
+
+
   const handleLogin = (email, password) => {
     const userData = {
       user: {
@@ -159,6 +163,7 @@ function App() {
 
 
 
+
   const handleSignUp = (firstName, lastName, email, password) => {
     const newUserData = { user: {
       firstName: firstName,
@@ -182,6 +187,10 @@ function App() {
         }
       })
   }
+
+
+
+  // console.log('product data', productData)
 
   return (
     <div className='grid-container'>
