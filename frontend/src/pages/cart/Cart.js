@@ -1,21 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css';
 import CartItem from '../../components/cart/CartItem';
-import { PayPalButton } from "react-paypal-button-v2";
+import PayPal from '../../components/cart/PayPal'
 
 
 export default function Cart(props) {
 
-    const { itemsInCart, productData } = props;
+    const { itemsInCart, productData, updateItemsInCart } = props;
 
-    console.log(itemsInCart)
+    const [ checkout, setCheckout ] = useState(false);
+
+    const getProductPrice = (productId) => {
+        const thisProduct = productData.find((product) => product.id === productId)
+        return thisProduct.price
+    }
+
+    const calculateCartTotal = () => {
+        let total = 0
+        for (let i = 0; i < itemsInCart.length; i++) {
+            const productPrice = getProductPrice(itemsInCart[i].productId)
+            const subtotal = productPrice * itemsInCart[i].productQuantity
+            total = total + subtotal
+        }
+        return total.toFixed(2)
+    }
 
     return (
         <div className='cart-row' >
             <div className='cart-column'>
                 <div className='cart-items-container' >
                     {itemsInCart.map((item) => {
-                        return <CartItem key={item.id} productId={item.productId} color={item.productColor} size={item.productSize} quantity={item.productQuantity} productData={productData} />
+                        return <CartItem key={item.id} productId={item.productId} color={item.productColor} size={item.productSize} quantity={item.productQuantity} productData={productData} updateItemsInCart={updateItemsInCart} />
                     })}
                 </div>
             </div>
@@ -25,21 +40,16 @@ export default function Cart(props) {
                         <h1>ORDER SUMMARY</h1>
                         <div id='cart-summary-price'>
                             <h2>ORDER TOTAL</h2>
-                            <p>£ total</p>
+                            <p>£ {calculateCartTotal()}</p>
                         </div>
-                        <PayPalButton amount="0.01"
-                            // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                            onSuccess={(details, data) => {
-                            alert("Transaction completed by " + details.payer.name.given_name);
-
-                            // OPTIONAL: Call your server to save the transaction
-                            return fetch("/paypal-transaction-complete", {
-                                method: "post",
-                                body: JSON.stringify({
-                                orderID: data.orderID
-                                })
-                            });
-                            }}/>
+                        {checkout ? (
+                            <PayPal calculateCartTotal={calculateCartTotal()} />
+                            ) : (
+                            <button onClick={() => {
+                                setCheckout(true);
+                            }} >
+                                checkout
+                            </button>) }
                     </div>
                 </div>
             </div>

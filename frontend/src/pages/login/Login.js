@@ -35,7 +35,7 @@ export default function Login(props) {
                         <input className='login-input' type='text' value={email} placeholder='email' onChange={handleEmailChange} />
                         <input className='login-input' type='password' value={password} placeholder='password' onChange={handlePasswordChange} />
                         {errorMessage ? <p className='error-message'>Incorrect email or password</p> : null}
-                        <input type="submit" id='login-button' value="login" />
+                        <input className="input-submit" type="submit" id='login-button' value="login" />
                         <div id='link-to-signup-container'>
                             <p id='need-account-text'>Don't have an account?</p><Link id="need-account-link" to='/signup'>Create Account</Link>
                         </div>

@@ -30,13 +30,7 @@ function App() {
           })
   }
 
-  useEffect(() => {
-    getProductData();
-    getCartData();
-    validateUser();
-  }, []);
-
-  const validateUser = () => {
+    const validateUser = () => {
     let token = sessionStorage.getItem('token')
     if (token) {
       fetch('http://localhost:4000/profile', {
@@ -67,6 +61,47 @@ function App() {
       })
   }
 
+  useEffect(() => {
+    getProductData();
+    getCartData();
+    validateUser();
+  }, []);
+
+
+  // const findProduct = (productId) => {
+  //   return productData.find((product) => product.id === productId)
+  // }
+
+  const findProductInCart = (productId) => {
+    return itemsInCart.find((product) => product.productId === productId)
+  }
+
+  const updateItemsInCart = (newQuantity, productId) => {
+    const thisProduct = findProductInCart(productId)
+
+    console.log(thisProduct)
+
+    const itemToUpdate = {
+      id: thisProduct.id,
+      productColor: thisProduct.productColor,
+      productId: thisProduct.productId,
+      productQuantity: newQuantity,
+      productSize: thisProduct.productSize
+    }
+
+    fetch('http://localhost:4000/updateCart', {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      }, body: JSON.stringify({itemToUpdate: itemToUpdate})
+    })
+    .then(response => response.json())
+    .then(items => {
+      console.log(items)
+    })
+  }
+
+
   const addItemsToCart = (id, color, size, quantity) => {
 
     const newItemToAddToCart = {
@@ -90,6 +125,8 @@ function App() {
     })
   }
 
+
+  
   const handleLogin = (email, password) => {
     const userData = {
       user: {
@@ -115,6 +152,8 @@ function App() {
         }
       })
   }
+
+
 
   const handleSignUp = (firstName, lastName, email, password) => {
     const newUserData = { user: {
@@ -154,7 +193,7 @@ function App() {
           <Route path='/signup' render={(routerProps) => <SignUp user={user} errorMessage={errorMessage} handleSignUp={handleSignUp} />} />
           <Route path='/login' render={(routerProps) => <Login handleLogin={handleLogin} user={user} errorMessage={errorMessage} />}/>
           <Route exact path='/shop' render={(routerProps) => <Shop {...routerProps} productData={productData} />} />
-          <Route path='/cart' render={(routerProps) => <Cart itemsInCart={itemsInCart} productData={productData} />} />
+          <Route path='/cart' render={(routerProps) => <Cart itemsInCart={itemsInCart} productData={productData} updateItemsInCart={updateItemsInCart} />} />
           <Route path='/product/:id' render={(routerProps) => <ProductDetail {...routerProps} productData={productData} addItemsToCart={addItemsToCart} />} />
         </main>
         <footer id='footer'>

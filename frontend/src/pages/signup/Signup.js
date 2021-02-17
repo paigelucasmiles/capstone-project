@@ -47,7 +47,7 @@ export default function SignUp(props) {
                         <input className='signup-input' type='text' value={lastName} placeholder='last name' onChange={handleLastNameChange} />
                         <input className='signup-input' type='text' value={email} placeholder='email' onChange={handleEmailChange} />
                         <input className='signup-input' type='password' value={password} placeholder='password' onChange={handlePasswordChange} />
-                        <input id='create-account-button' type='submit' value="submit" />
+                        <input className='input-submit' id='create-account-button' type='submit' value="submit" />
                         <div id='link-to-login-container'>
                             <p id='have-account-text'>Have an account?</p><Link id="have-account-link" to='/login'>Login</Link>
                         </div>

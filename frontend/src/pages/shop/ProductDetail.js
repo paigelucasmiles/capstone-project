@@ -23,9 +23,6 @@ export default function Product(props) {
     }
     
     const productSelected = productData.find((product) => product.id === parseInt(props.match.params.id))
-    if(!productSelected) {
-        return <div className="loading-screen"><img src="./images/Pulse-1s-200px.gif" alt="loading screen gif" /></div>
-    }
     
     const handleSubmit = (event) => {
         event.preventDefault();

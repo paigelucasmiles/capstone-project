@@ -45,9 +45,11 @@ footer {
 }
 
 button,
-select {
+select,
+input.input-submit {
   background-color: transparent;
-  border: none;
+  border: solid rgba(61, 68, 52, 0.444);
+  border-width: 0.1px;
   color: rgb(61, 68, 52);
   font-weight: 100;
   font-size: 12px;
@@ -55,7 +57,8 @@ select {
 }
 
 button:hover,
-select:hover {
+select:hover,
+input.input-submit:hover {
   cursor: pointer;
 }
 
@@ -76,3 +79,12 @@ a {
   height: inherit;
   width: inherit;
 }
+
+/* input.input-submit {
+  background-color: transparent;
+  border: none;
+  color: rgb(61, 68, 52);
+  font-weight: 100;
+  font-size: 12px;
+  letter-spacing: 1px;
+} */

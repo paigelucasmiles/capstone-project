@@ -22,9 +22,6 @@ export default function Product(props) {
             </div>
             <div className="price">
                 £{product.price}
-                {/* <button onClick={handleClick}>
-                    ADD TO CART
-                </button> */}
             </div>
         </div>
     )

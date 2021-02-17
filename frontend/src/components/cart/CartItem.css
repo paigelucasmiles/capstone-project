@@ -22,3 +22,8 @@ img.small {
   color: rgb(61, 68, 52);
   font-variant: small-caps;
 }
+
+.increment,
+.decrement {
+  margin: 8px;
+}
