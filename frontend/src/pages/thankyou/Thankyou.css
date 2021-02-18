@@ -1,0 +1,27 @@
+#thank-you-container {
+  width: fit-content;
+  margin: auto;
+  margin-top: 12%;
+  margin-bottom: 8%;
+  padding: 6%;
+  background-color: rgb(238, 232, 226);
+}
+
+#thank-you-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 38px;
+  padding-bottom: 8%;
+}
+
+.thankyou-link {
+  font-size: 12px;
+  text-decoration: underline;
+  /* padding: 10px; */
+}
+
+.thank-you-text {
+  font-size: 12px;
+  text-decoration: none;
+  padding-bottom: 24px;
+}

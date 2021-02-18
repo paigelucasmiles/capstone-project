@@ -13,6 +13,7 @@ import About from './pages/about/About';
 import Information from './pages/information/Information'
 import Shipping from './pages/shipping/Shipping'
 import Contact from './pages/contact/Contact'
+import Thankyou from './pages/thankyou/Thankyou';
 
 
 
@@ -202,11 +203,12 @@ useEffect(() => {
           <Route path='/about' component={About}></Route>
           <Route path="/information" component={Information}></Route>
           <Route path='/shipping' component={Shipping}></Route>
+          <Route path='/thankyou' component={Thankyou}></Route>
           <Route path='/contact' component={Contact} ></Route>
           <Route path='/signup' render={(routerProps) => <SignUp user={user} errorMessage={errorMessage} handleSignUp={handleSignUp} />} />
           <Route path='/login' render={(routerProps) => <Login handleLogin={handleLogin} user={user} errorMessage={errorMessage} />}/>
           <Route exact path='/shop' render={(routerProps) => <Shop {...routerProps} productData={productData} />} />
-          <Route path='/cart' render={(routerProps) => <Cart itemsInCart={itemsInCart} productData={productData} updateItemsInCart={updateItemsInCart} />} />
+          <Route path='/cart' render={(routerProps) => <Cart {...routerProps} itemsInCart={itemsInCart} productData={productData} updateItemsInCart={updateItemsInCart} />} />
           <Route path='/product/:id' render={(routerProps) => <ProductDetail {...routerProps} productData={productData} addItemsToCart={addItemsToCart} />} />
         </main>
         <footer id='footer'>

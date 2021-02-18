@@ -51,7 +51,8 @@ h1.home-title {
 
 p.value-prop {
   color: white;
-  background-color: rgba(0, 0, 0, 0.334);
+  text-shadow: 2px 1px 2px rgb(61, 68, 52);
+  /* background-color: rgba(0, 0, 0, 0.334); */
   /* color: rgb(238, 232, 226); */
   /* color: rgb(61, 68, 52); */
   width: fit-content;
@@ -66,7 +67,7 @@ p.value-prop {
 a.shop-collection-link {
   text-decoration: underline;
   color: rgb(61, 68, 52);
-  background-color: rgba(255, 255, 255, 0.423);
+  /* background-color: rgba(255, 255, 255, 0.423); */
   /* color: rgb(238, 232, 226); */
   font-size: 0.8rem;
   line-height: 50px;

@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react';
+// import { Redirect } from 'react-router-dom';
 
 export default function PayPal(props) {
 
-    const { calculateCartTotal } = props
+    const { calculateCartTotal, redirectHome } = props
 
 
     const paypal = useRef()
@@ -26,6 +27,9 @@ export default function PayPal(props) {
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
                 console.log(order)
+                if (order.status === "COMPLETED") {
+                    redirectHome();
+                }
             },
             onError: (err) => {
                 console.log(err)

@@ -25,6 +25,10 @@ export default function Cart(props) {
         return total.toFixed(2)
     }
 
+    const redirectHome = () => {
+        props.history.push('/thankyou')
+    }
+
     return (
         <div className='cart-row' >
             <div className='cart-column'>
@@ -43,7 +47,7 @@ export default function Cart(props) {
                             <p>£ {calculateCartTotal()}</p>
                         </div>
                         {checkout ? (
-                            <PayPal calculateCartTotal={calculateCartTotal()} />
+                            <PayPal calculateCartTotal={calculateCartTotal()} redirectHome={redirectHome} />
                             ) : (
                             <button onClick={() => {
                                 setCheckout(true);
