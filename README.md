@@ -6,7 +6,7 @@ This ecommerce app for the UK brand Fosse was built as my capstone project at Fl
 
 <h3>Requirements</h3>
 <li>Full-stack application</li>
-<li>Use a new technology, e.g. framework, programming lanuage, complex library.</li>
+<li>Use a new technology, e.g. framework, programming language, complex library</li>
 <li>Include Auth</li>
 <li>2.5 weeks</li>
 <li>Project presentation</li>
@@ -21,3 +21,9 @@ This ecommerce app for the UK brand Fosse was built as my capstone project at Fl
  <li>JavaScript</li>
  <li>CSS</li>
 </ul>
+
+<h2>Setup</h2>
+After you've installed the backend repo locally: https://github.com/paigelucasmiles/capstone-backend
+To run this project, install it locally by cloning this GitHub repository and opening it in your code editor.<br><br>
+Navigate to the folder titled <b>checkers-frontend</b> and run <code>npm install</code>, then <code>npm start</code>.
+You are now ready to start using the current iteration of this checkers app! Please see the user stories section to learn more about the current functionality of the game.<br><br>
