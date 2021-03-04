@@ -23,6 +23,22 @@ This ecommerce app for the UK brand Fosse was built as my capstone project at Fl
 </ul>
 
 <h2>Setup</h2>
-After you've installed the backend repo locally: https://github.com/paigelucasmiles/capstone-backend . Install this, frontend, repo locally by cloning this GitHub repository and opening it in your code editor.<br><br>
+After you've installed the backend repo locally: https://github.com/paigelucasmiles/capstone-backend . Install this locally by forking and cloning this GitHub repository and opening it in your code editor.<br><br>
+
 Navigate to the folder titled <b>frontend</b> and run <code>npm install</code>, then <code>npm start</code>.
 You are now ready to start using the current iteration of this ecommerce app! Please see the user stories section to learn more about the current functionality of the application.<br><br>
+
+<h2>Instructions</h2>
+The application will open on the Fosse homepage. 
+
+<h2>App Preview</h2>
+<b>Home Page</b>
+<img src="https://media.giphy.com/media/FLaUdf3JXr0Hf7a8gf/source.gif" alt="Demonstration of checkers game functionality" border="0">
+
+<h2>User Stories</h2>
+<h3>As a user, you will be able to:</h3>
+
+<h2>Status</h2>
+
+<h2>Contact</h2>
+<a href="https://www.linkedin.com/in/paigelmiles/"><img src="https://user-images.githubusercontent.com/68958970/94946276-dc7b8a00-04a9-11eb-9431-366689b9fa06.png" alt="Paige Miles" style="width:10px;height:10px;"></a>Paige Miles :evergreen_tree:<br>
