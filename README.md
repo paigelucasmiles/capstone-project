@@ -8,3 +8,5 @@ This ecommerce app for the UK brand Fosse was built as my capstone project at Fl
 <li>Full-stack application</li>
 <li>Use a new technology, e.g. framework, programming lanuage, complex library.</li>
 <li>Include Auth</li>
+<li>2.5 weeks</li>
+<li>Project presentation</li>
