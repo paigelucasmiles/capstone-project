@@ -15,7 +15,6 @@ This ecommerce app for the UK brand Fosse was built as my capstone project at Fl
 
 <ul>
  <li>Node/Express.js</li>
- <li>Express.js</li>
  <li>Knex.js</li>
  <li>Objection.js</li>
  <li>React.js</li>
