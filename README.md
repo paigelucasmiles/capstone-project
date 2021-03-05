@@ -7,7 +7,6 @@ This ecommerce app for the UK brand Fosse was built as my capstone project at Fl
 <h3>Requirements</h3>
 <li>Full-stack application</li>
 <li>Use a new technology, e.g. framework, programming language, complex library</li>
-<li>Include Auth</li>
 <li>2.5 weeks</li>
 <li>Project presentation</li>
 
@@ -54,7 +53,7 @@ The application will open on the Fosse homepage.
  <li>View the brands value propositions & aesthetic from the home page.</li>
  <li>Navigate to the shop and view all items available for purchase.</li>
  <li>Add an item to your cart by selecting color, price, and quantity.</li>
- <li>Nvaigate to the cart and view all items in the cart.</li>
+ <li>Navigate to the cart and view all items in the cart.</li>
  <li>Purchase items in the cart via PayPal.</li>
 </ol>
 
