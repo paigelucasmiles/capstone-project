@@ -33,13 +33,16 @@ The application will open on the Fosse homepage.
 
 <h2>App Preview</h2>
 <h3>Home Page</h3>
-<img src="https://media.giphy.com/media/G1nznpGT1dC1elizJy/giphy.gif" alt="View of Fosse home page" border="0"><br>
+<img src="https://media.giphy.com/media/G1nznpGT1dC1elizJy/giphy.gif" alt="View of Fosse home page" border="0">
 
 <h3>Shop</h3>
 <img src="https://media.giphy.com/media/TDKuqg06QHUVkzY5Oi/giphy.gif" alt="View of Fosse shop page" border="0">
 
 <h3>Product Page</h3>
 <img src="https://media.giphy.com/media/2d08FJOZ9k9v1OjwVY/giphy.gif" alt="View of individual product page" border="0">
+
+<h3>Cart Page</h3>
+<img src="https://media.giphy.com/media/63bFgBqW9y11OQLoKq/giphy.gif" alt="View of cart" border="0">
 
 <h2>User Stories</h2>
 <h3>As a user, you will be able to:</h3>
