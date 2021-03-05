@@ -44,6 +44,9 @@ The application will open on the Fosse homepage.
 <h3>Cart Page</h3>
 <img src="https://media.giphy.com/media/rYDTnW3PPYomuhCx0B/giphy.gif" alt="View of cart" border="0">
 
+<h3>Payment & Thank-you Page</h3>
+<img src="https://media.giphy.com/media/PMb2guYOZrRECA98Os/giphy.gif" alt="View of cart" border="0">
+
 <h2>User Stories</h2>
 <h3>As a user, you will be able to:</h3>
 
