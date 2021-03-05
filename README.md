@@ -59,5 +59,12 @@ The application will open on the Fosse homepage.
 
 <h2>Status</h2>
 
+With time, I like to add the following features to complete functionality of the store:
+
+<h3>As a user, you will be able to:</h3>
+
+<li>View a responsive version of the application on any device.</li>
+<li>To sign up for marketing communications.</li>
+
 <h2>Contact</h2>
 <a href="https://www.linkedin.com/in/paigelmiles/"><img src="https://user-images.githubusercontent.com/68958970/94946276-dc7b8a00-04a9-11eb-9431-366689b9fa06.png" alt="Paige Miles" style="width:10px;height:10px;"></a>Paige Miles :evergreen_tree:<br>
