@@ -48,7 +48,15 @@ The application will open on the Fosse homepage.
 <img src="https://media.giphy.com/media/PMb2guYOZrRECA98Os/giphy.gif" alt="View of cart" border="0">
 
 <h2>User Stories</h2>
-<h3>As a user, you will be able to:</h3>
+<h3>As a user, you are be able to:</h3>
+<ol>
+ <li>Log in to your account.</li>
+ <li>View the brands value propositions & aesthetic from the home page.</li>
+ <li>Navigate to the shop and view all items available for purchase.</li>
+ <li>Add an item to your cart by selecting color, price, and quantity.</li>
+ <li>Nvaigate to the cart and view all items in the cart.</li>
+ <li>Purchase items in the cart via PayPal.</li>
+</ol>
 
 <h2>Status</h2>
 
