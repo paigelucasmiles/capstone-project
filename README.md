@@ -32,10 +32,10 @@ You are now ready to start using the current iteration of this ecommerce app! Pl
 The application will open on the Fosse homepage. 
 
 <h2>App Preview</h2>
-<b>Home Page</b>
-<img src="https://media.giphy.com/media/G1nznpGT1dC1elizJy/giphy.gif" alt="View of Fosse home page" border="0">
+<h3>Home Page</h3>
+<img src="https://media.giphy.com/media/G1nznpGT1dC1elizJy/giphy.gif" alt="View of Fosse home page" border="0"><br>
 
-<b>Shop</b>
+<h3>Shop</h3><br>
 <img src="https://media.giphy.com/media/TDKuqg06QHUVkzY5Oi/giphy.gif" alt="View of Fosse shop page" border="0">
 
 
