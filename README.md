@@ -33,7 +33,11 @@ The application will open on the Fosse homepage.
 
 <h2>App Preview</h2>
 <b>Home Page</b>
-<img src="https://media.giphy.com/media/G1nznpGT1dC1elizJy/giphy.gif" alt="Demonstration of checkers game functionality" border="0">
+<img src="https://media.giphy.com/media/G1nznpGT1dC1elizJy/giphy.gif" alt="View of Fosse home page" border="0">
+
+<b>Shop</b>
+<img src="http://www.giphy.com/gifs/TDKuqg06QHUVkzY5Oi/giphy.gif" alt="View of Fosse shop page" border="0">
+
 
 <h2>User Stories</h2>
 <h3>As a user, you will be able to:</h3>
